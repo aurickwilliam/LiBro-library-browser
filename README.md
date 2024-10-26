@@ -1,8 +1,25 @@
-# React + Vite
+# BRUTT X MAAM KIM
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+---
 
-Currently, two official plugins are available:
+# LiBro - Library Browser
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+It is a custom made library catalog software that is designed for a specific university or institution library. In addition, LiBro contains all the wide range of books inside the library, each has its own accurate detail of information for each book. With the multiple convenient features users can easily find the books for their needs. With the user-friendly user interface, users can easily navigate through each book and librarians can conveniently keep track of the records of the book.
+
+
+A System/Project for The Entrepreneurial Mind Subject
+
+Made by Computer Science Sophomore from STI College Caloocan
+
+Members:
+- Barbosa, Angelo
+- Bonde, Jenny
+- Bugas, Tristan Carl
+- Cabatingan, Allen Joseph
+- Fulgencio, Charle
+- Lorenzo, Aurick William
+- Navales, Mhart Aaron
+- Ocampo, Joshua Marco
+- Sarte, Edrian
+- Talion, Ivan Cristopher
+
