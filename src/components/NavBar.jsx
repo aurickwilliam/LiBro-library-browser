@@ -26,7 +26,7 @@ export default function NavBar() {
                 <Menu size={25} className="text-secondary hover:text-primary cursor-pointer" onClick={() => setIsMenuOpen(!isMenuOpen)}/>
             </div>
 
-            <div className={`absolute top-20 right-0 w-full bg-background flex flex-col items-center font-poppins text-lg transform transition-transform ${isMenuOpen ? "opacity-100" : "opacity-0"} xl:w-80`}
+            <div className={`absolute z-10 top-20 right-0 w-full bg-background flex flex-col items-center font-poppins text-lg transform transition-transform ${isMenuOpen ? "opacity-100 visible" : "opacity-0 invisible"} xl:w-80`}
             style={{transition: "transform 0.3s ease, opacity 0.3s ease"}}>
                 <li className="list-none text-2xl text-secondary w-full text-center hover:bg-darkgray py-5">
                     <a href="/" className="flex items-center justify-center gap-2 ">
