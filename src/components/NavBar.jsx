@@ -19,7 +19,7 @@ export default function NavBar() {
                     <input type="text" placeholder="Search..."className=" h-10 w-72 rounded-xl pl-8 outline-none focus:outline-primary font-poppins"/>
                 </div>
 
-                <a href="adminpage" >
+                <a href="adminloginpage" >
                     <User size={25} className="text-secondary hover:text-primary cursor-pointer"/>
                 </a>
                 

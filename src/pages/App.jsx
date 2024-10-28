@@ -37,7 +37,7 @@ export default function App() {
             <h2 className=' text-2xl font-poppins text-primary md:text-3xl'>Magandang Umaga!</h2>
           </div>
 
-          <div className='p-5 rounded-md border border-1 border-background '>
+          <div className='p-5 rounded-md outline outline-1 outline-[#D9D9D9] shadow'>
             {/* <div className='bg-yellow-500 h-full'>
               <Slider autoSlide={false} interval={3000}>
                 {slider_img.map((slide) => (
