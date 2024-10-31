@@ -1,21 +1,13 @@
 
-import { useState } from "react";
-import PopUp from "../components/PopUp";
+import Carousel from "../components/Carousel";
+import { slides } from "../utils/carouselData.json";
 
 export default function Test() {
-    const [isOpen, setIsOpen] = useState(false);
-
-    const togglePopUp = () => {
-        setIsOpen(!isOpen);
-    }
-
     return (
         <>
-            <button className="bg-blue-300" onClick={togglePopUp}>Open Pop Up</button>
-            <PopUp isPopUp={isOpen} setTrigger={setIsOpen} title={"Error"}>
-                <h1>Hello Donna</h1>
-                <p>Invalid Credentials</p>
-            </PopUp>
+            <div className=" w-full flex items-center justify-center py-8 px-8 md:px-16 2xl:px-64">
+                <Carousel data={slides} autoSlide={true} interval={3000}/>
+            </div>
         </>  
     );
 }

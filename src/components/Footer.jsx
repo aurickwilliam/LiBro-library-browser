@@ -5,7 +5,7 @@ import { FaFacebookSquare } from "react-icons/fa";
 export default function Footer() {
     return (
         <div className="bg-background rounded-t-lg mt-10">
-            <div className="flex flex-col h-64 px-8 py-8 md:px-16 lg:px-16 lg:flex-row lg:pb-0 2xl:px-32">
+            <div className="flex flex-col h-64 px-8 py-8 md:px-16 lg:px-16 lg:flex-row lg:pb-0 2xl:px-64">
                 <div className="h-full lg:basis-full">
                     <div className="w-max">
                         <a href="/">
@@ -39,7 +39,7 @@ export default function Footer() {
                 </div>
             </div>
 
-            <div className="p-8 md:px-16 lg:px-16 2xl:px-32">
+            <div className="p-8 md:px-16 lg:px-16 2xl:px-64">
                 <hr className="w-full h-px bg-darkgray border-0 rounded-md" />
                 <p className="text-center font-nunito mt-2 text-secondary text-sm">LIBRO COPYRIGHT &copy; 2024. ALL RIGHTS RESERVED</p>
             </div>

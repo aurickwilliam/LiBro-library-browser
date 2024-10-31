@@ -6,7 +6,7 @@ export default function NavBar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     return (
-        <nav className=" bg-background px-8 h-full w-full flex items-center justify-between md:px-16 lg:px-16 xl:px-16 2xl:px-32 ">
+        <nav className=" bg-background px-8 h-full w-full flex items-center justify-between md:px-16 lg:px-16 xl:px-16 2xl:px-64 ">
             <div className='flex items-center'>
                 <a href="/">
                     <img src="src\assets\libro-logo.svg" alt="logo" className='size-20' />

@@ -4,6 +4,9 @@ import { getAnalytics } from "firebase/analytics";
 // Authentication
 import { getAuth } from "firebase/auth";
 
+// Firestore
+import { getFirestore } from "firebase/firestore";
+
 const firebaseConfig = {
   apiKey: "AIzaSyBEG4wIF-x5aEBN7kur_Zpp0yO1iF6LIA0",
   authDomain: "libro-library-browser.firebaseapp.com",
@@ -19,3 +22,6 @@ const analytics = getAnalytics(app);
 
 // Auth Variables
 export const auth = getAuth(app);
+
+// Firestore Variables
+export const bookDB = getFirestore(app);

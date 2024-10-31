@@ -50,14 +50,14 @@ export default function AdminLoginPage() {
     };
 
     const login = async () => {
-        console.log(auth?.currentUser?.email);
-        console.log(password);
-
         try {
             await signInWithEmailAndPassword(auth, email, password).then(data => {
                 console.log(data, "authData")
-                route("/adminpage");
+                route("/adminbookspage");
             })
+
+            console.log(auth?.currentUser?.email);
+            console.log(password);
         } catch (err) {
             let message = String(err.code).substring(5);
             let firstLetter = message.charAt(0).toUpperCase();

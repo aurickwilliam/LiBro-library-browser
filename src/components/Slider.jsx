@@ -20,8 +20,10 @@ export default function Slider({ children: slide, autoSlide=false, interval=3000
 
     return (
         <div className="overflow-hidden relative bg-yellow-400 h-full">
-            <div className="flex transition-transform ease-out duration-500" style={{transform: `translateX(-${slide_no * 100}%)`}}>
-                {slide}
+            <div className="flex h-[550px] bg-red-500 transition-transform ease-out duration-500" style={{transform: `translateX(-${slide_no * 100}%)`}}>
+                {/* {slide} */}
+                <img src="src\assets\img1.png" alt="" className="w-full"/>
+                <img src="src\assets\img2.png" alt="" className="w-full"/>
             </div>
 
             <div className="absolute inset-0 flex items-center justify-between p-2">
