@@ -1,4 +1,5 @@
 import AdminSideBar from "../components/AdminSideBar";
+import AdminBookCard from "../components/AdminBookCard";
 
 import { useState, useEffect } from "react";
 
@@ -55,6 +56,7 @@ export default function AdminBooksPage() {
   };
 
   const sleep = (delay) => new Promise((resolve) => setTimeout(resolve, delay));
+
   const addBook = async () => {
     generateURL();
     try {
@@ -85,7 +87,7 @@ export default function AdminBooksPage() {
   };
 
   return (
-    <main className=" bg-gray">
+    <main className=" bg-gray min-h-screen">
       <AdminSideBar active={"listOfBooks"} />
       <section className="h-max pl-[300px] py-5 pr-12">
         <h1 className="text-3xl font-poppins text-primary">Welcome!</h1>
@@ -97,21 +99,21 @@ export default function AdminBooksPage() {
         </div>
         <br />
         <div className="w-full h-max bg-white rounded-xl border-0 outline outline-1 outline-[#D9D9D9] p-3 drop-shadow-sm">
-          {bookList.map((book, key) => (
-            <div key={key} className="mb-10">
-              <img src={book.imgURL} alt="book cover" className="w-16"/>
-              <h1>{book.title}</h1>
-              <p>Author: {book.author}</p>
-              <p>Genre: {book.genre}</p>
-              <p>Location: {book.location}</p>
-              <button
-                onClick={() => deleteBook(book.id)}
-                className="bg-red-400 p-2 rounded-md text-secondary"
-              >
-                Delete
-              </button>
+          <div className="w-full max-h-12 p-2 flex gap-4 text-sm">
+            <p className="text-darkgray">#</p>
+            <div className="w-8"></div>
+            <div className="grid grid-cols-5 w-full items-center text-left mr-20 text-darkgray">
+              <p className="col-span-2">Title:</p>
+              <p>Author:</p>
+              <p>Genre:</p>
+              <p>Location:</p>
             </div>
-          ))}
+          </div>
+          <hr className="bg-[#D9D9D9] h-px border-0 mb-3 rounded-md" />
+          {bookList.map((book, key) => {
+            let index = key + 1;
+            return <AdminBookCard book={book} index={index} key={key} />;
+          })}
         </div>
 
         <br />
