@@ -10,14 +10,12 @@ export default function Carousel({ data, autoSlide, interval }) {
     setCurrentSlide((currentSlide) =>
       currentSlide === 0 ? slide_length - 1 : currentSlide - 1
     );
-    console.log(currentSlide);
   };
 
   const next_btn = () => {
     setCurrentSlide((currentSlide) =>
       currentSlide === slide_length - 1 ? 0 : currentSlide + 1
     );
-    console.log(currentSlide);
   };
 
   useEffect(() => {

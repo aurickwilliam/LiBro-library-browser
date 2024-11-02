@@ -1,0 +1,45 @@
+{
+    "slides": [
+        {
+            "src": "src\\assets\\img1.png",
+            "alt": "img1"
+        },
+        {
+            "src": "src\\assets\\img2.png",
+            "alt": "img2"
+        },
+        {
+            "src": "src\\assets\\img3.png",
+            "alt": "img3"
+        }
+    ],
+    "genres":[
+        {
+            "title": "Technology"
+        },
+        {
+            "title": "Fiction"
+        },
+        {
+            "title": "Non-Fiction"
+        },
+        {
+            "title": "History"
+        },
+        {
+            "title": "Science"
+        },
+        {
+            "title": "Novels"
+        },
+        {
+            "title": "Programming"
+        },
+        {
+            "title": "Mathematics"
+        },
+        {
+            "title": "Pyschology"
+        }
+    ]
+}

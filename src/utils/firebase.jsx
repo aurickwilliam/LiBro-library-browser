@@ -7,6 +7,9 @@ import { getAuth } from "firebase/auth";
 // Firestore
 import { getFirestore } from "firebase/firestore";
 
+// Image Storage
+import { getStorage } from "firebase/storage";
+
 const firebaseConfig = {
   apiKey: "AIzaSyBEG4wIF-x5aEBN7kur_Zpp0yO1iF6LIA0",
   authDomain: "libro-library-browser.firebaseapp.com",
@@ -25,3 +28,6 @@ export const auth = getAuth(app);
 
 // Firestore Variables
 export const bookDB = getFirestore(app);
+
+// Storage Variable
+export const bookCoverDB = getStorage(app);

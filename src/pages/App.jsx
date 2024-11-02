@@ -1,25 +1,12 @@
-import Slider from '../components/Slider';
 import GenreCard from '../components/GenreCard';
 import BookCard from '../components/BookCard';
 import Footer from '../components/Footer';
 import NavBar from '../components/NavBar';
 import Carousel from '../components/Carousel';
 
-import { slides } from '../utils/carouselData.json';
+import { slides, genres } from '../utils/data.json';
 
 export default function App() {
-
-  const genre_list = [
-    "Technology",
-    "Fiction",
-    "Non-Fiction",
-    "History",
-    "Science",
-    "Novels",
-    "Programming",
-    "Mathematics"
-  ]
-
 
   return (
     <main className='box-border'>
@@ -32,7 +19,7 @@ export default function App() {
           </div>
 
           <div>
-            <Carousel data={slides} autoSlide={true} interval={3000}/>
+            <Carousel data={slides} autoSlide={false} interval={3000}/>
           </div>
           
         </div>
@@ -44,8 +31,8 @@ export default function App() {
 
           <div className='w-full grid grid-cols-2 gap-8 lg:grid-cols-3 2xl:grid-cols-4'>
             {
-              genre_list.map((genre, key) => (
-                <GenreCard name={genre} key={key} link='#'/>
+              genres.map((genre, key) => (
+                <GenreCard name={genre.title} key={key} link='#'/>
               ))
             }
           </div>

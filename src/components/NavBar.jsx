@@ -14,10 +14,9 @@ export default function NavBar() {
             </div>
 
             <div className="gap-3 items-center flex">
-                <div className="hidden relative xl:flex items-center">
-                    <Search className="absolute left-1 cursor-pointer text-background hover:text-primary" size={25}/>
-                    <input type="text" placeholder="Search..."className=" h-10 w-72 rounded-xl pl-8 outline-none focus:outline-primary font-poppins"/>
-                </div>
+                <a href="/">
+                    <Search size={25} className="text-secondary hover:text-primary cursor-pointer"/>
+                </a>
 
                 <a href="adminloginpage" >
                     <User size={25} className="text-secondary hover:text-primary cursor-pointer"/>
