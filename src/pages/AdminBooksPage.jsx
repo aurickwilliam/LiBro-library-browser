@@ -13,7 +13,22 @@ import {
   doc,
 } from "firebase/firestore";
 
+import { Plus } from "lucide-react";
+import AddBookPopUp from "../components/AddBookPopUp";
+
 export default function AdminBooksPage() {
+  const [addPopUp, setAddPopUp] = useState(false);
+
+  const togglePopUp = () => {
+    setAddPopUp(!addPopUp);
+  };
+
+  if (addPopUp) {
+    document.documentElement.style.overflowY = "hidden";
+  } else {
+    document.documentElement.style.overflowY = "auto";
+  }
+
   const [bookList, setBookList] = useState([]);
 
   // Variables for new Book
@@ -58,6 +73,8 @@ export default function AdminBooksPage() {
   const sleep = (delay) => new Promise((resolve) => setTimeout(resolve, delay));
 
   const addBook = async () => {
+    console.log(img);
+
     generateURL();
     try {
       await sleep(1000);
@@ -87,7 +104,7 @@ export default function AdminBooksPage() {
   };
 
   return (
-    <main className=" bg-gray min-h-screen">
+    <main className=" bg-gray min-h-screen relative">
       <AdminSideBar active={"listOfBooks"} />
       <section className="h-max pl-[300px] py-5 pr-12">
         <h1 className="text-3xl font-poppins text-primary">Welcome!</h1>
@@ -112,48 +129,37 @@ export default function AdminBooksPage() {
           <hr className="bg-[#D9D9D9] h-px border-0 mb-3 rounded-md" />
           {bookList.map((book, key) => {
             let index = key + 1;
-            return <AdminBookCard book={book} index={index} key={key} />;
+            return (
+              <AdminBookCard
+                book={book}
+                index={index}
+                key={key}
+                delfunc={() => deleteBook(book.id)}
+              />
+            );
           })}
         </div>
-
-        <br />
-        <br />
-        <div className="flex flex-col gap-3 w-max">
-          <input
-            type="text"
-            placeholder="Book Title..."
-            onChange={(e) => setBookTitle(e.target.value)}
-          />
-          <input
-            type="text"
-            placeholder="Book Author..."
-            onChange={(e) => setBookAuthor(e.target.value)}
-          />
-          <input
-            type="text"
-            placeholder="Book Genre..."
-            onChange={(e) => setBookGenre(e.target.value)}
-          />
-          <input
-            type="number"
-            placeholder="Book Location..."
-            onChange={(e) => setBookLocation(Number(e.target.value))}
-          />
-          <input
-            type="file"
-            onChange={(e) => {
-              setImg(e.target.files[0]);
-            }}
-          />
-
-          <button
-            className="bg-primary text-left h-10 p-2 rounded-md"
-            onClick={addBook}
-          >
-            Add
-          </button>
-        </div>
       </section>
+
+      <div className="absolute right-0 bottom-0 mb-5 mr-5">
+        <button
+          className="w-20 h-16 bg-primary rounded-xl hover:bg-[#85C534] flex items-center justify-center"
+          onClick={togglePopUp}
+        >
+          <Plus strokeWidth={3} className="text-secondary" />
+        </button>
+      </div>
+
+      <AddBookPopUp
+        isPopUp={addPopUp}
+        setTrigger={setAddPopUp}
+        setTitle={setBookTitle}
+        setAuthor={setBookAuthor}
+        setGenre={setBookGenre}
+        setLocation={setBookLocation}
+        setImg={setImg}
+        add_func={addBook}
+      />
     </main>
   );
 }
